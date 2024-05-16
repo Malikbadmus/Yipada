@@ -3,7 +3,7 @@ import requests
 import pymysql
 from datetime import datetime
 
-# Function to scrape exchange rate data from website
+
 def scrape_exchange_rates():
     url = 'https://api.exchangerate-api.com/v4/latest/NGN'
     response = requests.get(url)
@@ -19,7 +19,7 @@ def scrape_exchange_rates():
         return None
     
 
-# Function to update MySQL database with exchange rate data
+
 def update_database(exchange_rates):
     DB_HOST = os.environ.get("DB_HOST")
     DB_USER = os.environ.get("DB_USER")
